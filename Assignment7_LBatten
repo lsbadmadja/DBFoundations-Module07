@@ -1,5 +1,61 @@
-# Title
-## Introduction
-## Topic 1
-### Subtopic
-## Summary
+# Assignment 07
+## SQL User-Defined, Scalar, Inline, and Multi-Statement Functions
+
+### Introduction
+#### 
+In this article, I would like to talk about SQL User-Defined Functions (UDFs) and differences and similarities between Scalar, Inline, and Multi-Statement Functions.
+
+### SQL UDFs
+#### An SQL User-Defined Function or UDF is a routine that accepts input parameters, performs an action, and returns a result. This result can be a single/scalar value or a set of values. A routine is a “programmable object that encapsulates codes to calculate a result or to execute activity”. Other routines are stored procedures and triggers (Itzik 383). UDFs are usually used to (Itzik 384): 
+Allow users to save, re-use, and modify functions that they use repeatedly (modular programming).
+Allow users to utilize and tailor system functions to their needs. 
+Allow users to include intensive logic and complex formulas in their codes.
+Allow intensive logic or complex formulas to be executed faster and reduce network traffic through encapsulation of this intensive logic or complex formulas.
+
+### Scalar, Inline, and Multi-Statement Functions
+#### In this section I would like to talk about similarities and differences between a Scalar, Inline, and Multi-Statement Function.
+	A Scalar Function is a function that accepts one or more parameters and returns a single value. A Table-Valued Function is a function that accepts one or more parameters and returns a set of values or a table. There are two Table-Valued Functions: Inline and Multi-Statement. The differences between the two are (Itzik 178, 179):
+The Inline Function can only have one Select statement, but the Multi-Statement Function can have more than one statement.
+The Inline Function cannot have Begin and End blocks, but the Multi-Statement Function can.
+In the Inline Function, the structure of the table is defined by the Select statement, but, in the Multi-Statement Function, the structure of the result table is defined by users.
+The Inline Function may be better in performance because it has only one Select statement. 
+	Based on descriptions in above sections, we can conclude that similarities and differences between a Scalar, Inline, and Multi-Statement Functions are:
+Similarities:
+ All functions allow users to include intensive logic or complex formulas in their codes.
+ All functions allow users to save, re-use, and modify functions that they use repeatedly.
+ All functions allow users to utilize system functions and tailor them to their needs.
+ All functions allow intensive logic or complex formulas to be executed faster and reduce network traffic through encapsulation of this intensive logic or formulas.
+Differences:
+ A Scalar Function returns a single value, but Inline and Multi-Statement Functions return a set of values.
+ An Inline Function cannot have Begin and End blocks, but a Multi-Statement and Scalar Function can. 
+ An Inline Function can only have one Select statement, but a Multi-Statement Function can have more than one statement.
+ In the Inline Function, the structure of the table is defined by the Select statement, but, in the Multi-Statement Function, the structure of the result table is defined by users.
+ An Inline Function may be better in performance because it has only one Select statement.
+
+### Summary
+#### 	In this article, I talked about when to use SQL UDFs and differences and similarities between Scalar, Inline, and Multi-Statement Functions. To summarize:
+An SQL UDF is a routine that accepts input parameters, performs an action, and returns a result. This result can be a single/scalar value or a set of values. 
+A routine is a “programmable object that encapsulates codes to calculate a result or to execute activity”. UDFs, stored procedures, and triggers are SQL routines.
+UDFs are usually used to:
+ Allow users to save, re-use, and modify functions that they use repeatedly (modular programming).
+ Allow users to utilize and tailor system functions to their needs. 
+ Allow users to include intensive logic and complex formulas in their codes.
+ Allow intensive logic or complex formulas to be executed faster and reduce network traffic through encapsulation of this intensive logic or complex formulas.
+A Scalar Function is a function that accepts one or more parameters and returns a single value. 
+A Table-Valued Function is a function that accepts one or more parameters and returns a set of values or a table. Two Table-Valued Functions are Inline and Multi-Statement. 
+Similarities and differences between a Scalar, Inline, and Multi-Statement Function are:
+Similarities:
+ All functions allow users to include intensive logic or complex formulas in their codes.
+ All functions allow users to save, re-use, and modify functions that they use repeatedly.
+ All functions allow users to utilize system functions and tailor them to their needs.
+ All functions allow intensive logic or complex formulas to be executed faster and reduce network traffic through encapsulation of this intensive logic or formulas.
+Differences:
+ A Scalar Function returns a single value, but Inline and Multi-Statement Functions return a set of values.
+ An Inline Function cannot have Begin and End blocks, but a Multi-Statement and Scalar Function can.
+ An Inline Function can only have one Select statement, but a Multi-Statement Function can have more than one statement.
+ In the Inline Function, the structure of the table is defined by the Select statement, but, in the Multi-Statement Function, the structure of the result table is defined by users.
+ An Inline Function may be better in performance because it has only one Select statement.
+
+### References
+#### 1. Ben-Gan, Itzik. “Table expressions”. T-SQL Fundamentals. 3rd ed., Microsoft Press, 2016, pp. 161-192.  
+#### 2. Ben-Gan, Itzik. “Programmable objects”. T-SQL Fundamentals. 3rd ed., Microsoft Press, 2016, pp. 361-413. 
